@@ -12,12 +12,20 @@ const Navbar = () => {
             }
         });
 
-        navTween.fromTo('nav', {backgroundColor: 'transparent'}, {
-            backgroundColor: '#00000050', 
-            backgroundFilter: 'blur(10px)',
+        navTween.fromTo(
+        'nav',
+        { backgroundColor: 'transparent' },
+        {
+            backgroundColor: 'rgba(0,0,0,0.3)',
             duration: 1,
             ease: 'power1.inOut',
-        })
+            css: {
+            'backdrop-filter': 'blur(10px)'
+            }
+        }
+        );
+
+
     })
   return (
     <nav>
